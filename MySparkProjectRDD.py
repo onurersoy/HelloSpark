@@ -21,7 +21,8 @@ if __name__ == "__main__":
     # will create a SparkSession then use it to get a SparkContext.
     spark = SparkSession \
         .builder \
-        .config(conf=conf)\
+        .config(conf=conf) \
+        .config("spark.driver.bindAddress", "127.0.0.1") \
         .getOrCreate()
 
 

@@ -8,6 +8,7 @@ if __name__ == "__main__":
         .builder \
         .master("local[3]") \
         .appName("HelloSparkSQL") \
+        .config("spark.driver.bindAddress", "127.0.0.1") \
         .getOrCreate()
 
     logger = Log4J(spark)
