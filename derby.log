@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Aug 24 01:43:58 TRT 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-018a-2491-a2e1-00001ba143d0 
+on database directory /Users/kzfq009/Documents/Projects/personal/HelloSpark/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@1e2ae683 
+Loaded from file:/Users/kzfq009/Documents/spark3/spark-3.3.2-bin-hadoop3/jars/derby-10.14.2.0.jar
+java.vendor=Amazon.com Inc.
+java.runtime.version=1.8.0_372-b07
+user.dir=/Users/kzfq009/Documents/Projects/personal/HelloSpark
+os.name=Mac OS X
+os.arch=aarch64
+os.version=13.5
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

@@ -2,7 +2,7 @@ import sys
 from pyspark.sql import SparkSession
 from lib.logger import Log4J
 
-# 11.0
+# 12.0
 if __name__ == "__main__":
     spark = SparkSession \
         .builder \

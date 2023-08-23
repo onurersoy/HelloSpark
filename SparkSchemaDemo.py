@@ -4,13 +4,13 @@ from pyspark.sql.types import StructType, StructField, DateType, IntegerType, St
 
 from lib.logger import Log4J
 
-# 12.0: Pretty much the same with SparkSchema.py file (without the comments etc.). On this one, we will learn creating
+# 13.0: Pretty much the same with SparkSchema.py file (without the comments etc.). On this one, we will learn creating
 # our own schema, that's why we copied the code to keep this one clean as much as we can.
 if __name__ == "__main__":
     spark = SparkSession \
         .builder \
         .master("local[3]") \
-        .appName("SparkSchema") \
+        .appName("SparkSchemaDemo") \
         .config("spark.driver.bindAddress", "127.0.0.1") \
         .getOrCreate()
 

@@ -7,7 +7,7 @@ if __name__ == "__main__":
     spark = SparkSession \
         .builder \
         .master("local[3]") \
-        .appName("HelloSparkSQL") \
+        .appName("MySparkProjectSQL") \
         .config("spark.driver.bindAddress", "127.0.0.1") \
         .getOrCreate()
 
