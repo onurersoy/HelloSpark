@@ -1,6 +1,6 @@
 from pyspark.sql import *
 
-from lib.logger import Log4J
+from lib import Log4J
 
 # 15.0
 if __name__ == "__main__":
@@ -56,9 +56,3 @@ if __name__ == "__main__":
         .saveAsTable("flight_data_tbl")
 
     logger.info(spark.catalog.listTables("AIRLINE_DB"))
-
-
-
-
-
-

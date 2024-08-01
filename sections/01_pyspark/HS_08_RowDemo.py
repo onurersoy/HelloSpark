@@ -2,7 +2,7 @@ from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
 
-from lib.logger import Log4J
+from lib import Log4J
 
 # 16.0
 def to_date_df(df, fmt, fld):

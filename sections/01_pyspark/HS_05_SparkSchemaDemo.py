@@ -1,8 +1,7 @@
-import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, DateType, IntegerType, StringType
 
-from lib.logger import Log4J
+from lib import Log4J
 
 # 13.0: Pretty much the same with SparkSchema.py file (without the comments etc.). On this one, we will learn creating
 # our own schema, that's why we copied the code to keep this one clean as much as we can.

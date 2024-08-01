@@ -1,8 +1,7 @@
-import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import spark_partition_id
 
-from lib.logger import Log4J
+from lib import Log4J
 
 # 14.0
 if __name__ == "__main__":
@@ -78,4 +77,3 @@ if __name__ == "__main__":
     # In fact, a 4MB file is too small for Spark. In real scenarios, you should have a much larger file.
     # I prefer managing file sizes between 500 MB to a couple of GBs. Not too big and not too small. To alter it,
     # use ".option("maxRecordsPerFile", 10000) \" option.
-

@@ -1,6 +1,6 @@
 import sys
 from pyspark.sql import SparkSession
-from lib.logger import Log4J
+from lib import Log4J
 
 # 10.0
 if __name__ == "__main__":

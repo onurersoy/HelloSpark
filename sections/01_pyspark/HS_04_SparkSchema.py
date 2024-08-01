@@ -1,6 +1,5 @@
-import sys
 from pyspark.sql import SparkSession
-from lib.logger import Log4J
+from lib import Log4J
 
 # 12.0
 if __name__ == "__main__":
@@ -31,7 +30,7 @@ if __name__ == "__main__":
     # You can see int fields, even bigint fields and column names displayed in alphabetical order if you are working on
     # json (check the below code). But date fields still look as string.
 
-    # 11.2: You can interfer the scheme 2 ways:
+    # 11.2: You can interfere the scheme 2 ways:
     # i. Explicit: You can define/create schema
     # ii. Implicit: You can use already existed schema along with your source data if you are f.e. working on a parquet
     # file (which usually holds the schema details along with the data itself). So, the DataFrame reader for the parquet

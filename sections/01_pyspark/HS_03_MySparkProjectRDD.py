@@ -1,9 +1,9 @@
 import sys
 from collections import namedtuple
 
-from pyspark import SparkConf, SparkContext
+from pyspark import SparkConf
 from pyspark.sql import *
-from lib.logger import Log4J
+from lib import Log4J
 
 # 11.0
 
