@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from pyspark.shell import spark
 from pyspark.sql import SparkSession
-from lib import load_survey_df, count_by_country
+from lib.utils import load_survey_df, count_by_country
 
 class UtilsTestCase(TestCase):
 

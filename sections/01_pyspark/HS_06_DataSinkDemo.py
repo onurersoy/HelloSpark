@@ -1,7 +1,7 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import spark_partition_id
 
-from lib import Log4J
+from lib.logger import Log4J
 
 # 14.0
 if __name__ == "__main__":
@@ -24,8 +24,8 @@ if __name__ == "__main__":
     #     .option("path", "dataSink/parquet/") \
     #     .save()
 
-    # .format("parquet") >> We were going with this one but due to local spark-defaults.conf file issue, we could not
-    # include avro, that's why it is parquet for now. It is because Spark AVRO doesn't come bundled with Apache Spark,
+    # .format("parquet") >> We were going with this one, but due to local spark-defaults.conf file issue, we could not
+    # include avro; that's why it is parquet for now. It is because Spark AVRO doesn't come bundled with Apache Spark,
     # so if you want to work with Avro data, then you must include an additional Scala package in your project.
     # We are working in Python IDE, and it doesn't offer you a method to include Scala or Java dependencies.
     # Remember the spark-defaults.conf file? You can use the same file to add some Scala packages.

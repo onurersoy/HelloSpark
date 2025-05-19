@@ -3,11 +3,11 @@ import sys
 
 from pyspark.sql import *
 
-from lib import Log4J
-from lib import get_spark_app_config, load_survey_df, count_by_country
+from lib.logger import Log4J
+from lib.utils import get_spark_app_config, load_survey_df, count_by_country
 
-# 3.0: SparkSession is a Singleton object; so each Spark application can have one and only one active Spark
-# -session. Because the SparkSession is your driver, and you cannot have more than one driver in a Spark application.
+# 3.0: SparkSession is a Singleton object; so each Spark application can have one and only one active Spark session.
+# Because the SparkSession is your driver, and you cannot have more than one driver in a Spark application.
 
 if __name__ == "__main__":
 

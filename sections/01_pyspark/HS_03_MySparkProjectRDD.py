@@ -3,7 +3,7 @@ from collections import namedtuple
 
 from pyspark import SparkConf
 from pyspark.sql import *
-from lib import Log4J
+from lib.logger import Log4J
 
 # 11.0
 
@@ -25,8 +25,8 @@ if __name__ == "__main__":
         .config("spark.driver.bindAddress", "127.0.0.1") \
         .getOrCreate()
 
-
-    ###### CREATING RDD ######
+    ############################################################################################################
+    # CREATING RDD
     sc = spark.sparkContext
     logger = Log4J(spark)
 
@@ -35,10 +35,9 @@ if __name__ == "__main__":
         sys.exit(-1)
 
         linesRDD = sc.textFile(sys.argv[1])
-    ##########################
 
-
-    ###### PROCESSING RDD ######
+    ############################################################################################################
+    # PROCESSING RDD
     linesRDD = sc.textFile(sys.argv[1])
     partitionedRDD = linesRDD.repartition(2)
 
@@ -51,4 +50,3 @@ if __name__ == "__main__":
     colsList = countRDD.collect()
     for x in colsList:
         logger.info(x)
-    ##########################

@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from lib import Log4J
+from lib.logger import Log4J
 
 # 12.0
 if __name__ == "__main__":
@@ -12,6 +12,7 @@ if __name__ == "__main__":
 
     logger = Log4J(spark)
 
+    ############################################################################################################
     # CSV:
     flightTimeCsvDF = spark.read \
         .format("csv") \
@@ -36,6 +37,7 @@ if __name__ == "__main__":
     # file (which usually holds the schema details along with the data itself). So, the DataFrame reader for the parquet
     # source loaded it with the same schema.
 
+    ############################################################################################################
     # JSON:
     flightTimeJsonDF = spark.read \
         .format("json") \
@@ -44,6 +46,7 @@ if __name__ == "__main__":
     flightTimeJsonDF.show(5)
     logger.warn("JSON Schema:" + flightTimeJsonDF.schema.simpleString())
 
+    ############################################################################################################
     # PARQUET:
     flightTimeParquetDF = spark.read \
         .format("parquet") \

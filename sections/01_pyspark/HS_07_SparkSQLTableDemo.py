@@ -1,6 +1,6 @@
 from pyspark.sql import *
 
-from lib import Log4J
+from lib.logger import Log4J
 
 # 15.0
 if __name__ == "__main__":
@@ -17,7 +17,6 @@ if __name__ == "__main__":
     flightTimeParquetDF = spark.read \
         .format("parquet") \
         .load("data/flight*.parquet")
-
 
     flightTimeParquetDF.write \
         .mode("overwrite") \
