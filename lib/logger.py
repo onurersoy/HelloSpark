@@ -1,5 +1,5 @@
 # 4.0: We created this Python package and class to create a new Class for handling log4J and expose simple and
-# -easy to use methods to create a log entry.
+# easy to use methods to create a log entry.
 
 class Log4J:
     def __init__(self, spark):

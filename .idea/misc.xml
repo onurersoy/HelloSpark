@@ -1,3 +1,6 @@
 <project version="4">
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (HelloSpark)" project-jdk-type="Python SDK" />
+  <component name="Black">
+    <option name="sdkName" value="Python 3.12" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="Python 3.10 (pythonArmory)" project-jdk-type="Python SDK" />
 </project>
